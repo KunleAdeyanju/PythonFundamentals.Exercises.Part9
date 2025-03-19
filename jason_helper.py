@@ -15,7 +15,6 @@ def read_all_json_files(file_path):
     
     return jlist
 
-
 def write_pickle(file_path, data):
     json_object = json.dumps(data, indent=4)
     with open("super_smash_characters.pickle", mode = "w") as outfile:
