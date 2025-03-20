@@ -8,7 +8,7 @@ def read_json(file_path):
 
 def read_all_json_files(file_path):
     jlist = []
-    for file in os.lisdir(file_path):
+    for file in os.listdir(file_path):
         full_file_path = "%s/%s" % (file_path, file)
         data = read_json(full_file_path)
         jlist.append(data)
