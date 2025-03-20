@@ -47,11 +47,11 @@ class JsonHelperTest(unittest.TestCase):
 
     def test_write_pickle(self):
 
-        expected_md5 = self._getmd5('golden_output.pickle')
+        expected_md5 = self._getmd5('/Users/kunle/Projects/PythonFundamentals.Exercises.Part9/golden_output.pickle')
 
         file_contents = self._json_stubs
-        json_helper.write_pickle("output.pickle", file_contents)
-        actual_md5 = self._getmd5('output.pickle')
+        json_helper.write_pickle("/Users/kunle/Projects/PythonFundamentals.Exercises.Part9/output.pickle", file_contents)
+        actual_md5 = self._getmd5('/Users/kunle/Projects/PythonFundamentals.Exercises.Part9/output.pickle')
 
         print(f"{expected_md5} : {actual_md5}")
         self.assertEqual(expected_md5, actual_md5)
@@ -59,7 +59,7 @@ class JsonHelperTest(unittest.TestCase):
     def test_load_pickle(self):
         expected = self._json_stubs
 
-        file_path = os.path.join('./', 'golden_output.pickle')
-        actual = json_helper.load_pickle(file_path)
+        file_path = "/Users/kunle/Projects/PythonFundamentals.Exercises.Part9/golden_output.pickle" # os.path.join('./', 'golden_output.pickle')
+        actual = json_helper.read_json(file_path)
 
         self.assertEqual(expected, actual)

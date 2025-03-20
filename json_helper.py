@@ -21,5 +21,13 @@ def write_pickle(file_path, data):
         outfile.write(json_object)
 
 def load_pickle(file_path):
-    pickle = read_json(file_path)
+    with open(file_path, 'r') as file:
+        pickle = json.load(file)
     print(pickle)
+    # f = open(file_path)
+    # data = json.load(f)
+
+    # for i in data:
+    #     print(i)
+
+    # f.close
